@@ -1,0 +1,26 @@
+<div class="container">
+  <h1><%=@title%>
+  <h3>This blog was written by <%=@author%>!</h3>
+  <p>Blog Entry</p>
+
+<div class = "Form">
+  <p> <%=@content%> </p>
+
+  <h1>Tags</h1>
+  <% @tags_for_entry.each do |tag| %>
+    <ul style = "list-style: none">
+      <li><%=tag.description %></li>
+    </ul>
+  <% end %>
+  <a href="/entries/<%=@entry.id%>/tags/new">Add Tag</a>
+
+
+  <form action="/entries/<%=@entry.id %>" method="POST">
+    <input name="_method" type="hidden" value="delete" />
+    <input type="submit" value="DELETE" />
+  </form>
+
+
+</div>
+
+</div>

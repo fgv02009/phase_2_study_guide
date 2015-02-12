@@ -1,0 +1,21 @@
+  <h1>Blogs!</h1>
+  <h3>Here are all the current entries:</h3>
+
+<div class = "Form">
+
+
+  <h1>Entries</h1>
+  <% @entries.each do |entry| %>
+  <div class = post>
+    <ul style = "list-style: none">
+      <li><a href="/entries/<%=entry.id %>"><%= entry.title %></a></li>
+      <li><%= entry.author %></li>
+    </ul>
+  </div>
+  <% end %>
+
+
+  <div class="button"><a href="/entries/new"><input type="submit" value="Create New" /></a></div>
+
+
+</div>

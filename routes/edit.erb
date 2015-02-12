@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%=@article.title%></h1>
+  <p><%=@article.content%> </p>
+
+</div>
+
+<form action = "/categories/:category_id/articles/<%=@article.id%>" method = "POST">
+  <input name="_method" type="hidden" value="PUT"/>
+  <label for="article_title">Title</label>
+  <input id="article_title" type="text" name="article[title]" value="<%= @article.title %>" size=60/>
+  <br>
+  <label for="article_content">Content</label>
+  <textarea id="article_content"  name ='article[content]' cols="65" rows="5" ><%=@article.content%></textarea>
+  <br>
+  <input type="submit" value="Save" />
+</form>

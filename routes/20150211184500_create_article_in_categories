@@ -1,0 +1,9 @@
+class CreateArticleInCategories < ActiveRecord::Migration
+  def change
+    create_table :article_in_categories do |t|
+      t.belongs_to :category, :article
+
+      t.timestamps
+    end
+  end
+end

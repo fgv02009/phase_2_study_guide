@@ -1,0 +1,15 @@
+<div class = "container">
+
+  <ul style = "list-style: none">
+    <form action="/entries/<%=@entry.id%>/tags" method="POST">
+      <li>
+        <label for="description">New Tag:</label>
+        <input id="description" type="text" name="description" />
+        //name is what shows up as the param
+      </li>
+      <li>
+        <input type="submit" value="Save" />
+      </li>
+      </form>
+  </ul>
+</div>
